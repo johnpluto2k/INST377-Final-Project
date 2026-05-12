@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pantry Plate - Favorites</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/common.js"></script>
+  <script defer src="js/favorites.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="brand">Pantry Plate</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="favorites.html" class="active">Favorites</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Saved recipes</h1>
+      <p class="lede">
+        Recipes you bookmarked from a detail page. Stored in Supabase so they
+        persist between visits and across devices.
+      </p>
+    </section>
+
+    <section class="section">
+      <div id="favorites-status" class="status">Loading...</div>
+      <div id="favorites-grid" class="recipe-grid"></div>
+    </section>
+  </main>
+
+  <footer>Pantry Plate &middot; INST 377 Final Project &middot; John Bae &amp; Samvitti Nag</footer>
+</body>
+</html>

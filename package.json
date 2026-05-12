@@ -1,0 +1,21 @@
+{
+  "name": "inst354-final",
+  "version": "1.0.0",
+  "description": "Recipe app that reduces food waste by suggesting meals from ingredients the user already owns.",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "John Bae & Samvitti Nag",
+  "license": "MIT"
+}

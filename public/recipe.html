@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pantry Plate - Recipe</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Chart.js (JS Library #2) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script defer src="js/common.js"></script>
+  <script defer src="js/recipe.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="brand">Pantry Plate</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="section" id="detail-section">
+      <div id="detail-status" class="status">Loading recipe...</div>
+      <div id="detail-body" class="hidden">
+        <div class="detail-hero">
+          <img id="detail-image" alt="" />
+          <div>
+            <h1 id="detail-title">Recipe</h1>
+            <p class="muted">
+              <span id="detail-ready">--</span> min &middot;
+              <span id="detail-servings">--</span> servings
+            </p>
+            <div id="detail-tags" class="tag-row"></div>
+            <div style="margin-top: 18px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <button id="save-favorite-btn" class="custom-btn">Save to Favorites</button>
+              <a href="index.html" class="btn-ghost" style="text-decoration:none;">Back to search</a>
+              <span id="save-status" class="status"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="ingredients-section">
+      <h2>Ingredients</h2>
+      <p class="muted">Items highlighted in green are already in your pantry.</p>
+      <ul id="ingredient-list"></ul>
+    </section>
+
+    <section class="section hidden" id="chart-section">
+      <h2>Pantry coverage</h2>
+      <p class="muted">How much of this recipe you already have vs. what you would need to buy.</p>
+      <canvas id="coverage-chart" height="120"></canvas>
+    </section>
+
+    <section class="section hidden" id="instructions-section">
+      <h2>Instructions</h2>
+      <ol id="instruction-list"></ol>
+    </section>
+  </main>
+
+  <footer>Pantry Plate &middot; INST 377 Final Project &middot; John Bae &amp; Samvitti Nag</footer>
+</body>
+</html>

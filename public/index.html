@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pantry Plate - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Swiper (JS Library #1) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="js/common.js"></script>
+  <script defer src="js/home.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="brand">Pantry Plate</li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>What can I cook tonight?</h1>
+      <p class="lede">
+        Type ingredients you already have at home. Pantry Plate finds recipes
+        that use as many of them as possible, with the shortest grocery list.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Your pantry</h2>
+      <p class="muted">Add ingredients one at a time. They are saved to this device.</p>
+
+      <div class="row">
+        <input id="ingredient-input" type="text" placeholder="e.g. tomato, rice, cheese" />
+        <button id="add-ingredient-btn" class="custom-btn">Add</button>
+        <button id="find-recipes-btn" class="custom-btn">Find Recipes</button>
+        <button id="clear-pantry-btn" class="btn-ghost">Clear pantry</button>
+      </div>
+
+      <div id="pantry-chips" class="chip-list"></div>
+      <div id="home-status" class="status"></div>
+    </section>
+
+    <section class="section">
+      <h2>Featured matches</h2>
+      <p class="muted">Top 5 recipes that use the most of your pantry.</p>
+      <div id="featured-swiper" class="swiper">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>All matching recipes</h2>
+      <p class="muted">Click any card to see ingredients, instructions, and how much of your pantry it covers.</p>
+      <div id="recipe-grid" class="recipe-grid"></div>
+    </section>
+  </main>
+
+  <footer>Pantry Plate &middot; INST 377 Final Project &middot; John Bae &amp; Samvitti Nag</footer>
+</body>
+</html>

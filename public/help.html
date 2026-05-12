@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pantry Plate - Help</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/common.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="brand">Pantry Plate</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="help.html" class="active">Help</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>How to use Pantry Plate</h1>
+      <p class="lede">A short walkthrough and answers to common questions.</p>
+    </section>
+
+    <section class="section">
+      <h2>Step by step</h2>
+      <ol>
+        <li>Open the <a href="index.html">Home</a> page.</li>
+        <li>Type an ingredient and press <strong>Add</strong>. Repeat for everything in your fridge or pantry. Ingredients appear as removable chips.</li>
+        <li>Press <strong>Find Recipes</strong>. The page shows a featured carousel of the top 5 matches plus a full grid of all results.</li>
+        <li>Click any recipe card to open its detail page, where you will see the full ingredient list, cooking steps, dietary tags, and a chart of pantry coverage.</li>
+        <li>Press <strong>Save to Favorites</strong> on a recipe you want to keep. It appears on the <a href="favorites.html">Favorites</a> page on future visits.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Frequently asked questions</h2>
+
+      <h3>Do I need an account?</h3>
+      <p>No. The favorites list is shared, which is intentional for this project demo. Per-user accounts are on the roadmap.</p>
+
+      <h3>Why did "Find Recipes" return nothing?</h3>
+      <p>Spoonacular sometimes returns an empty list if the ingredient names are very specific. Try broader names ("chicken" instead of "boneless skinless chicken thighs").</p>
+
+      <h3>Why did I get a rate-limit error?</h3>
+      <p>The free Spoonacular plan allows around 150 requests per day across the whole project. If you see a 402 or 429 response, wait a few minutes or generate a new free key.</p>
+
+      <h3>The page is empty / the API returned an error.</h3>
+      <p>Open the browser dev tools (F12), check the Console tab for an error message, and confirm that the deployment has <code>SPOONACULAR_API_KEY</code>, <code>SUPABASE_URL</code>, and <code>SUPABASE_ANON_KEY</code> set in Vercel's environment variables.</p>
+
+      <h3>Are the ingredient names case-sensitive?</h3>
+      <p>No. The backend lowercases and trims the list before sending it to Spoonacular.</p>
+
+      <h3>Can I open the site by double-clicking index.html?</h3>
+      <p>You can see the layout that way, but the API calls won't work because there is no server. To use the full app, either run <code>npm start</code> and open <code>http://localhost:3000</code>, or visit the deployed Vercel URL.</p>
+    </section>
+  </main>
+
+  <footer>Pantry Plate &middot; INST 377 Final Project &middot; John Bae &amp; Samvitti Nag</footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pantry Plate - About</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/common.js"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="brand">Pantry Plate</li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>About Pantry Plate</h1>
+      <p class="lede">
+        A recipe finder built for the INST 377 final project by John Bae and
+        Samvitti Nag. The goal: help people cook from what they already have
+        and waste less food in the process.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>The food-waste problem</h2>
+      <p>
+        Roughly a third of the food produced in the United States is thrown
+        away, and most of that waste happens at home. A common reason is that
+        people don't know what to make with the odd mix of ingredients sitting
+        in their fridge, so produce spoils and gets tossed.
+      </p>
+      <p>
+        Pantry Plate addresses that gap directly: tell it what you have, and
+        it ranks recipes by how many of your ingredients they use and how few
+        new groceries you would need to buy.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>How it works</h2>
+      <p>
+        The Home page sends your ingredients to our Node.js backend, which
+        calls the <a href="https://spoonacular.com/food-api" target="_blank" rel="noreferrer">Spoonacular Food API</a>
+        and returns recipes ranked by usable-ingredient count. Each recipe
+        card opens a detail page with the full ingredient list, cooking steps,
+        dietary tags, and a Chart.js doughnut showing how much of the recipe
+        your pantry covers. Recipes you like can be saved to a
+        <a href="https://supabase.com" target="_blank" rel="noreferrer">Supabase</a>
+        database from the Recipe page so they appear on Favorites between
+        visits.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Team</h2>
+      <p>
+        <strong>John Bae</strong> &mdash; backend, deployment, recipe detail and favorites pages.<br />
+        <strong>Samvitti Nag</strong> &mdash; UI design, home page, About and Help pages.
+      </p>
+    </section>
+  </main>
+
+  <footer>Pantry Plate &middot; INST 377 Final Project &middot; John Bae &amp; Samvitti Nag</footer>
+</body>
+</html>
