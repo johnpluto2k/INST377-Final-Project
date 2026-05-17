@@ -7,7 +7,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ---------- Supabase client ----------
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
 const supabase =
@@ -24,7 +23,6 @@ function requireSupabase(res) {
   return true;
 }
 
-// ---------- Health check ----------
 app.get("/api/health", (req, res) => {
   res.json({
     ok: true,
@@ -34,8 +32,6 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-// ---------- 1) External provider: Spoonacular findByIngredients ----------
-// GET /api/recipes?ingredients=tomato,rice,cheese&number=12
 app.get("/api/recipes", async (req, res) => {
   try {
     const key = process.env.SPOONACULAR_API_KEY;
@@ -73,8 +69,6 @@ app.get("/api/recipes", async (req, res) => {
   }
 });
 
-// Helper: Spoonacular recipe detail (used by recipe.html)
-// GET /api/recipes/:id
 app.get("/api/recipes/:id", async (req, res) => {
   try {
     const key = process.env.SPOONACULAR_API_KEY;
@@ -102,7 +96,6 @@ app.get("/api/recipes/:id", async (req, res) => {
   }
 });
 
-// ---------- 2) Read from DB: GET /api/favorites ----------
 app.get("/api/favorites", async (req, res) => {
   if (!requireSupabase(res)) return;
   const { data, error } = await supabase
@@ -113,8 +106,6 @@ app.get("/api/favorites", async (req, res) => {
   res.json(data || []);
 });
 
-// ---------- 3) Write to DB: POST /api/favorites ----------
-// Body: { recipe_id, title, image, missed_count }
 app.post("/api/favorites", async (req, res) => {
   if (!requireSupabase(res)) return;
   const { recipe_id, title, image, missed_count } = req.body || {};
@@ -139,7 +130,6 @@ app.post("/api/favorites", async (req, res) => {
   res.status(201).json(data);
 });
 
-// Bonus: remove a favorite (handy on the Favorites page)
 app.delete("/api/favorites/:id", async (req, res) => {
   if (!requireSupabase(res)) return;
   const { error } = await supabase
