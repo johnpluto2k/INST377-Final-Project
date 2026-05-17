@@ -1,5 +1,3 @@
-// home.js - pantry input, recipe search, Swiper carousel + grid.
-
 let swiperInstance = null;
 
 document.addEventListener("DOMContentLoaded", () => {
