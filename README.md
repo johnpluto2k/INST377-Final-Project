@@ -18,16 +18,16 @@ groceries the user would have to buy. Recipes can be opened for full
 instructions and dietary tags, and saved to a personal favorites list backed
 by a Supabase database.
 
-The project ships five pages (Home, Recipe Detail, Favorites, About, Help),
+The project app has five pages (Home, Recipe Detail, Favorites, About, Help),
 three authored backend endpoints (one external API proxy, one DB read, one
 DB write), and two frontend JS libraries (Swiper for the featured carousel,
-Chart.js for the pantry-coverage doughnut chart on each recipe).
+Chart.js for the pantry-coverage donut chart on each recipe).
 
 ## Target browsers
 
 Tested on the most recent versions of **Chrome**, **Edge**, and **Firefox**
 on desktop. Mobile Chrome and Mobile Safari render correctly down to a
-375px viewport (the nav and recipe grid both collapse responsively).
+375px viewport to fit phone screen size (the nav and recipe grid both collapse responsively).
 The app does not require any browser extensions in production - all
 external API calls go through our backend, so CORS is handled server-side.
 
