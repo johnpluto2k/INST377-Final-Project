@@ -1,5 +1,3 @@
-// favorites.js - loads saved recipes from the backend (which reads Supabase).
-
 document.addEventListener("DOMContentLoaded", loadFavorites);
 
 async function loadFavorites() {
