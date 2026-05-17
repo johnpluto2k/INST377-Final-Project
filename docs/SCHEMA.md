@@ -15,6 +15,7 @@ create table public.favorites (
   created_at   timestamptz default now()
 );
 
+alter table public.favorites disable row level security;
 
 ```
 
